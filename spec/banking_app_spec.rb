@@ -6,4 +6,8 @@ describe Bank do
     expect(subject).to be_an_instance_of Bank
   end
 
+  it "initialized bank has an empty statement array" do
+    expect(subject.statement).to be_empty
+  end
+
 end
