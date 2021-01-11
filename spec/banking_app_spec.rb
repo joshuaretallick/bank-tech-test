@@ -7,7 +7,7 @@ describe Bank do
   end
 
   it "initialized bank has an empty statement array" do
-    expect(subject.statement).to be_empty
+    expect(subject.transactions).to be_empty
   end
 
   it "initialized bank has a balance of 0 by default" do
@@ -30,8 +30,8 @@ describe Bank do
 
   end
 
-  xit "stores the transaction history in the statement" do
-    expect{ subject.deposit(100) }.to change { subject.statement.length }.by 1
+  it "stores the transaction history in the statement" do
+    expect{ subject.deposit(100) }.to change { subject.transactions.length }.by 1
   end
 
 end
