@@ -22,4 +22,12 @@ describe Bank do
 
   end
 
+  describe "#withdrawal" do
+    it "allows the user to withdraw money from the bank account" do
+      subject.withdrawal(100)
+      expect(subject.balance).to eq -100
+    end
+    
+  end
+
 end
