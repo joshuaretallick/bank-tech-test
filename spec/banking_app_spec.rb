@@ -10,4 +10,16 @@ describe Bank do
     expect(subject.statement).to be_empty
   end
 
+  it "initialized bank has a balance of 0 by default" do
+    expect(subject.balance).to eq 0
+  end
+
+  describe "#deposit" do
+    it "allows the user to add money to bank account" do
+      subject.deposit(100)
+      expect(subject.balance).to eq 100
+    end
+
+  end
+
 end
