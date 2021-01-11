@@ -63,8 +63,28 @@
           null,
           null
         ]
+      },
+      "/Users/joshuaretallick/Projects/Bootcamp/tech-test/bank-tech-test/spec/transaction_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/joshuaretallick/Projects/Bootcamp/tech-test/bank-tech-test/lib/transaction.rb": {
+        "lines": [
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1610378473
+    "timestamp": 1610378846
   }
 }
