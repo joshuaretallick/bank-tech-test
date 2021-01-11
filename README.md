@@ -32,6 +32,14 @@ date || credit || debit || balance
 10/01/2012 || 1000.00 || || 1000.00
 ```
 
+```
+Input                                 |           Output
+bank_deposit(1000, 10-01-2012)        |           puts #{deposit} deposited #{date}
+bank_deposit(2000, 13-01-2012)        |           puts #{deposit} deposited #{date}
+bank_withdrawal(500, 14-01-2012)      |           puts #{withdrawal} withdrawn #{date}
+bank_statement                        |           (see lines 29 - 32 for table output)
+```
+
 ## Self-assessment
 
-Once you have completed the challenge and feel happy with your solution, here's a form to help you reflect on the quality of your code: https://docs.google.com/forms/d/1Q-NnqVObbGLDHxlvbUfeAC7yBCf3eCjTmz6GOqC9Aeo/edit 
+Once you have completed the challenge and feel happy with your solution, here's a form to help you reflect on the quality of your code: https://docs.google.com/forms/d/1Q-NnqVObbGLDHxlvbUfeAC7yBCf3eCjTmz6GOqC9Aeo/edit
