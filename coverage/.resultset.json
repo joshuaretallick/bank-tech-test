@@ -1,0 +1,70 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/joshuaretallick/Projects/Bootcamp/tech-test/bank-tech-test/spec/banking_app_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/joshuaretallick/Projects/Bootcamp/tech-test/bank-tech-test/lib/banking_app.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          5,
+          5,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1610378473
+  }
+}

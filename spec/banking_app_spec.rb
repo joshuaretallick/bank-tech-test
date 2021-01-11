@@ -27,7 +27,11 @@ describe Bank do
       subject.withdrawal(100)
       expect(subject.balance).to eq -100
     end
-    
+
+  end
+
+  xit "stores the transaction history in the statement" do
+    expect{ subject.deposit(100) }.to change { subject.statement.length }.by 1
   end
 
 end
