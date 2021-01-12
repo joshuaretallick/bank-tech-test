@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require_relative 'transaction'
 
 class Bank
-
   attr_reader :transactions, :balance
   HEADING = 'date || credit || debit || balance'
 
@@ -19,6 +20,7 @@ class Bank
   def withdrawal(amount)
     raise 'Cannot withdraw a negative amount' unless amount.positive?
     raise 'Insufficient balance available' unless @balance >= amount
+
     @balance -= amount
     withdrawal = Transaction.new(0, amount, @balance)
     @transactions << withdrawal
@@ -34,7 +36,6 @@ class Bank
   private
 
   def format(amount)
-   '%.2f' % amount
+    '%.2f' % amount
   end
-
 end
