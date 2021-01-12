@@ -53,6 +53,14 @@ describe Bank do
       subject.deposit(200)
       expect { subject.statement }.to output("date || credit || debit || balance\n12/01/2021 || 200.00 || 0.00 || 300.00\n12/01/2021 || 100.00 || 0.00 || 100.00\n").to_stdout
     end
+
+    it 'prints a statement with the date, credit and balance after a deposit and withdrawal is made in reverse chronological order' do
+      subject.deposit(1000)
+      subject.deposit(2000)
+      subject.withdrawal(500)
+      expect { subject.statement }.to output("date || credit || debit || balance\n12/01/2021 || 0.00 || 500.00 || 2500.00\n12/01/2021 || 2000.00 || 0.00 || 3000.00\n12/01/2021 || 1000.00 || 0.00 || 1000.00\n").to_stdout
+    end
+
   end
 
 end
