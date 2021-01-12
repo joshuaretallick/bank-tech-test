@@ -25,7 +25,7 @@ class Bank
   def statement
     puts HEADING
     @transactions.reverse.each do |t|
-      print "#{t.timestamp} || #{format(t.credit)} || #{format(t.debit)} || #{format(@balance)}\n"
+      print "#{t.timestamp} || #{format(t.credit)} || #{format(t.debit)} || #{format(t.current_balance)}\n"
     end
   end
 

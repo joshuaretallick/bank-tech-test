@@ -48,7 +48,11 @@ describe Bank do
       expect { subject.statement }.to output("date || credit || debit || balance\n12/01/2021 || 100.00 || 0.00 || 100.00\n").to_stdout
     end
 
+    it "displays the statement in reverse chronological order" do
+      subject.deposit(100)
+      subject.deposit(200)
+      expect { subject.statement }.to output("date || credit || debit || balance\n12/01/2021 || 200.00 || 0.00 || 300.00\n12/01/2021 || 100.00 || 0.00 || 100.00\n").to_stdout
+    end
   end
-
 
 end
