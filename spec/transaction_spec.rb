@@ -6,7 +6,7 @@ describe Transaction do
     expect(subject).to be_an_instance_of Transaction
   end
 
-  it "knows the time" do
+  xit "knows the time" do
     expect(subject.timestamp).to be_an_instance_of Time
   end
 

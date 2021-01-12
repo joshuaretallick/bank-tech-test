@@ -1,10 +1,12 @@
 class Transaction
 
-  attr_reader :amount, :timestamp
+  attr_reader :amount, :timestamp, :credit, :debit
 
-  def initialize(amount = 0)
-    @amount = amount.to_f
-    @timestamp = Time.now.getutc
+  def initialize(credit, debit, balance)
+    # @amount = amount.to_f
+    @credit = credit
+    @debit = debit
+    @timestamp = Time.now.strftime('%d/%m/%Y')
   end
 
 end
