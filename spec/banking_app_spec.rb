@@ -32,12 +32,22 @@ describe Bank do
 
   describe "#withdrawal" do
     it "allows the user to withdraw money from the bank account" do
+      subject.deposit(200)
       subject.withdrawal(100)
-      expect(subject.balance).to eq -100
+      expect(subject.balance).to eq 100
     end
 
     it "stores the transaction history in the statement" do
+      subject.deposit(200)
       expect{ subject.withdrawal(100) }.to change { subject.transactions.length }.by 1
+    end
+
+    it 'stops a withdraw if balance lower than 0' do
+      expect { subject.withdrawal(-50) }.to raise_error 'Cannot withdraw a negative amount'
+    end
+
+    it 'raises an error when withdrawal would result in negative balance' do
+      expect { subject.withdrawal(50) }.to raise_error 'Insufficient balance available'
     end
 
   end

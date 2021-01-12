@@ -17,6 +17,8 @@ class Bank
   end
 
   def withdrawal(amount)
+    raise 'Cannot withdraw a negative amount' unless amount.positive?
+    raise 'Insufficient balance available' unless @balance >= amount
     @balance -= amount
     withdrawal = Transaction.new(0, amount, @balance)
     @transactions << withdrawal
