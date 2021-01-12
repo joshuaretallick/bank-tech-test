@@ -18,15 +18,21 @@ class Bank
 
   def withdrawal(amount)
     @balance -= amount
-    @transactions << Transaction.new(amount, 0, @balance)
+    withdrawal = Transaction.new(0, amount, @balance)
+    @transactions << withdrawal
   end
 
-  # def statement
-  #   puts HEADING
-  #   @transactions.map do |t|
-  #     type = t.amount > 0 ? "credit" : "debit"
-  #     "#{t.timestamp} || #{type} || #{t.amount} || balance #{@balance.to_f}"
-  #   end
-  # end
+  def statement
+    puts HEADING
+    @transactions.reverse.each do |t|
+      print "#{t.timestamp} || #{format(t.credit)} || #{format(t.debit)} || #{format(@balance)}\n"
+    end
+  end
+
+  private
+
+  def format(amount)
+   '%.2f' % amount
+  end
 
 end
