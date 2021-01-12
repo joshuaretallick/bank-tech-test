@@ -2,6 +2,10 @@ require 'banking_app'
 
 describe Bank do
 
+  before(:each) do
+    allow(Time).to receive(:now).and_return(Time.parse("12/01/2021"))
+  end
+
   it "created an instance of Bank" do
     expect(subject).to be_an_instance_of Bank
   end
@@ -39,10 +43,9 @@ describe Bank do
   end
 
   describe "#statement" do
-    it "displays the statement in a readable format" do
-      allow(Time).to receive(:now).and_return(01/01/01)
+    it "displays the statement in a readable format when called" do
       subject.deposit(100)
-      expect(subject.statement).to eq ""
+      expect { subject.statement }.to output("date || credit || debit || balance\n12/01/2021 || 100.00 || 0.00 || 100.00\n").to_stdout
     end
 
   end
