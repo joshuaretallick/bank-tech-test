@@ -20,6 +20,10 @@ describe Bank do
       expect(subject.balance).to eq 100
     end
 
+    it "stores the transaction history in the statement" do
+      expect{ subject.deposit(100) }.to change { subject.transactions.length }.by 1
+    end
+
   end
 
   describe "#withdrawal" do
@@ -28,10 +32,20 @@ describe Bank do
       expect(subject.balance).to eq -100
     end
 
+    it "stores the transaction history in the statement" do
+      expect{ subject.withdrawal(100) }.to change { subject.transactions.length }.by 1
+    end
+
   end
 
-  it "stores the transaction history in the statement" do
-    expect{ subject.deposit(100) }.to change { subject.transactions.length }.by 1
+  describe "#statement" do
+    it "displays the statement in a readable format" do
+      allow(Time).to receive(:now).and_return(01/01/01)
+      subject.deposit(100)
+      expect(subject.statement).to eq ""
+    end
+
   end
+
 
 end
