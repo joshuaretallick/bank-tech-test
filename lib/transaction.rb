@@ -2,14 +2,9 @@ class Transaction
 
   attr_reader :amount, :timestamp
 
-  def initialize
+  def initialize(amount = 0)
     @amount = amount.to_f
     @timestamp = Time.now.getutc
   end
-
-  def to_s
-    type = @amount > 0 ? "credit" : "debit"
-    "#{@timestamp} - #{type} - #{@amount}"
-  end 
 
 end
