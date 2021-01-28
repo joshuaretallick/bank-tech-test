@@ -1,12 +1,6 @@
 # Bank tech test
 
-Today, you'll practice doing a tech test.
-
-For most tech tests, you'll essentially have unlimited time.  This practice session is about producing the best code you can when there is a minimal time pressure.
-
-You'll get to practice your OO design and TDD skills.
-
-You'll work alone, and you'll also review your own code so you can practice reflecting on and improving your own work.
+I completed this tech test to practice my OO design and TDD skills. Original specifications can be found [here](https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md)
 
 ## Specification
 
@@ -40,9 +34,6 @@ bank_withdrawal(500, 14-01-2012)      |           puts #{withdrawal} withdrawn #
 bank_statement                        |           (see lines 29 - 32 for table output)
 ```
 
-## Self-assessment
-
-Once you have completed the challenge and feel happy with your solution, here's a form to help you reflect on the quality of your code: https://docs.google.com/forms/d/1Q-NnqVObbGLDHxlvbUfeAC7yBCf3eCjTmz6GOqC9Aeo/edit
 
 ## My approach
 
